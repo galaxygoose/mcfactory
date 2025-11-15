@@ -151,10 +151,10 @@ src/
 
 ```
 src/sdk/
-├── client.ts                   # Main MCF SDK client
+├── client.ts                   # Main MCFactory SDK client
 ├── index.ts                    # SDK exports
 ├── interfaces.ts               # SDK interface definitions
-├── mcf.d.ts                    # MCF type definitions
+├── mcfactory.d.ts              # MCFactory type definitions
 └── providerBindings.ts         # Provider binding utilities
 ```
 

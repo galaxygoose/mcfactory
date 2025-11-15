@@ -1,6 +1,6 @@
 # Architecture
 
-MCF (Model Context Factory) follows a layered, modular architecture designed for extensibility, maintainability, and reliable AI operations. This document explains the core architectural principles, including the Master Interface Contract (MIC) and Master Import Map (MIM).
+MCFactory (Model Context Factory) follows a layered, modular architecture designed for extensibility, maintainability, and reliable AI operations. This document explains the core architectural principles, including the Master Interface Contract (MIC) and Master Import Map (MIM).
 
 ## Core Principles
 

@@ -386,7 +386,7 @@ describe('CLI', () => {
       }
 
       expect(mockConsoleLog).toHaveBeenCalledWith(
-        expect.stringContaining('Run "mcf init" to create a default configuration')
+        expect.stringContaining('Run "mcfactory init" to create a default configuration')
       );
     });
   });

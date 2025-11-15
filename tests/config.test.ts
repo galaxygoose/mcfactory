@@ -5,7 +5,7 @@
 import { ConfigLoader } from '../src/core/config/configLoader';
 import { EnvConfig } from '../src/core/config/env';
 import { ProviderConfig } from '../src/core/config/providerConfig';
-import { MCFConfig, MCFEnvironment } from '../src/types';
+import { MCFactoryConfig, MCFactoryEnvironment } from '../src/types';
 
 // Mock fs module
 const mockFs = require('fs');
@@ -29,7 +29,7 @@ describe('Config', () => {
     });
 
     test('should load configuration successfully', () => {
-      const mockConfig: MCFConfig = {
+      const mockConfig: MCFactoryConfig = {
         providers: {
           openai: {
             apiKey: 'test-key'
@@ -68,7 +68,7 @@ describe('Config', () => {
     });
 
     test('should handle complex configuration with all sections', () => {
-      const complexConfig: MCFConfig = {
+      const complexConfig: MCFactoryConfig = {
         providers: {
           openai: { apiKey: 'openai-key' },
           anthropic: { apiKey: 'anthropic-key' },
@@ -115,7 +115,7 @@ describe('Config', () => {
     });
 
     test('should handle minimal configuration', () => {
-      const minimalConfig: MCFConfig = {
+      const minimalConfig: MCFactoryConfig = {
         providers: {},
         defaults: {}
       };
@@ -171,10 +171,10 @@ describe('Config', () => {
       expect(result.LOCAL_MODEL_PATH).toBeUndefined();
     });
 
-    test('should return MCFEnvironment typed object', () => {
+    test('should return MCFactoryEnvironment typed object', () => {
       process.env.OPENAI_API_KEY = 'test-key';
 
-      const result = EnvConfig.get() as MCFEnvironment;
+      const result = EnvConfig.get() as MCFactoryEnvironment;
 
       expect(result.OPENAI_API_KEY).toBe('test-key');
       expect(typeof result).toBe('object');
@@ -202,7 +202,7 @@ describe('Config', () => {
 
   describe('Configuration Integration', () => {
     test('should validate configuration structure', () => {
-      const validConfig: MCFConfig = {
+      const validConfig: MCFactoryConfig = {
         providers: {
           openai: { apiKey: 'test-key', model: 'gpt-4' },
           anthropic: { apiKey: 'claude-key' }
@@ -236,7 +236,7 @@ describe('Config', () => {
     });
 
     test('should handle configuration with local provider', () => {
-      const configWithLocal: MCFConfig = {
+      const configWithLocal: MCFactoryConfig = {
         providers: {
           local: {
             modelPath: '/models/llama-7b',
@@ -256,7 +256,7 @@ describe('Config', () => {
     });
 
     test('should handle configuration with pipeline definitions', () => {
-      const configWithPipelines: MCFConfig = {
+      const configWithPipelines: MCFactoryConfig = {
         providers: { openai: { apiKey: 'test' } },
         defaults: {},
         pipelines: {
@@ -291,7 +291,7 @@ describe('Config', () => {
     });
 
     test('should handle configuration with guardrails', () => {
-      const configWithGuardrails: MCFConfig = {
+      const configWithGuardrails: MCFactoryConfig = {
         providers: { openai: { apiKey: 'test' } },
         defaults: {},
         guardrails: {
@@ -312,7 +312,7 @@ describe('Config', () => {
     });
 
     test('should handle configuration with training settings', () => {
-      const configWithTraining: MCFConfig = {
+      const configWithTraining: MCFactoryConfig = {
         providers: { openai: { apiKey: 'test' } },
         defaults: {},
         training: {

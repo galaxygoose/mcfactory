@@ -1,6 +1,6 @@
 // MIC goes here. Maintainer will paste the contract.
 /**
- * MCF — Model Context Factory
+ * MCFactory — Model Context Factory
  * MASTER INTERFACE CONTRACT (MIC)
  *
  * This file defines every shared type, interface, enum, and contract
@@ -15,7 +15,7 @@
 // ENV + CONFIG
 // =========================================
 
-export interface MCFEnvironment {
+export interface MCFactoryEnvironment {
     OPENAI_API_KEY?: string;
     ANTHROPIC_API_KEY?: string;
     GEMINI_API_KEY?: string;
@@ -25,7 +25,7 @@ export interface MCFEnvironment {
     [key: string]: string | undefined;
   }
   
-  export interface MCFConfig {
+  export interface MCFactoryConfig {
     providers: ProviderConfigMap;
     defaults: DefaultModuleConfig;
     pipelines?: Record<string, PipelineDefinition>;

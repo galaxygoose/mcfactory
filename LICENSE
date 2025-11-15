@@ -1,36 +1,36 @@
-MCF ALPHA LICENSE v0.1
+MCFACTORY ALPHA LICENSE v0.1
 
 Effective Date: November 14, 2025
 
-This is the license for the Alpha release of the Model Context Factory (MCF).  
-By using the software ("MCF"), you agree to the following terms:
+This is the license for the Alpha release of the Model Context Factory (MCFactory).
+By using the software ("MCFactory"), you agree to the following terms:
 
-1. Permitted Use  
-You may use, modify, and integrate MCF into your personal or commercial projects if your total revenue from all products or services using MCF is less than 10,000 USD per month.
+1. Permitted Use
+You may use, modify, and integrate MCFactory into your personal or commercial projects if your total revenue from all products or services using MCFactory is less than 10,000 USD per month.
 
-2. No Resale or Repackaging  
-You may not sell, license, distribute, or repackage MCF itself.  
-You may not offer MCF as a competing SDK, framework, API, or toolkit.  
-You may not resell or redistribute MCF in a way that competes with the original project.
+2. No Resale or Repackaging
+You may not sell, license, distribute, or repackage MCFactory itself.
+You may not offer MCFactory as a competing SDK, framework, API, or toolkit.
+You may not resell or redistribute MCFactory in a way that competes with the original project.
 
-3. Attribution  
-If you use MCF in a commercial product, a visible acknowledgment of "Powered by the Model Context Factory (MCF)" must appear in documentation or an About section.
+3. Attribution
+If you use MCFactory in a commercial product, a visible acknowledgment of "Powered by the Model Context Factory (MCFactory)" must appear in documentation or an About section.
 
-4. Restrictions  
-You may not remove copyright notices.  
-You may not claim ownership of MCF.  
-You may not use MCF to train or improve any model that competes with the MCF framework.
+4. Restrictions
+You may not remove copyright notices.
+You may not claim ownership of mcfactory.
+You may not use MCFactory to train or improve any model that competes with the MCFactory framework.
 
-5. Enterprise or High-Revenue Use  
-If your total revenue from products using MCF reaches or exceeds 10,000 USD per month, you must obtain a commercial license. Contact the MCF team for details.
+5. Enterprise or High-Revenue Use
+If your total revenue from products using MCFactory reaches or exceeds 10,000 USD per month, you must obtain a commercial license. Contact the MCFactory team for details.
 
-6. No Warranty  
-MCF is provided "as is" without any warranties or guarantees of performance, safety, or fitness for purpose.
+6. No Warranty
+MCFactory is provided "as is" without any warranties or guarantees of performance, safety, or fitness for purpose.
 
-7. Limitation of Liability  
-The authors are not liable for damages, loss of revenue, or data loss arising from the use of MCF.
+7. Limitation of Liability
+The authors are not liable for damages, loss of revenue, or data loss arising from the use of MCFactory.
 
-8. Termination  
-Violation of this license terminates your rights to use MCF.
+8. Termination
+Violation of this license terminates your rights to use MCFactory.
 
-Copyright © 2025 MCF Authors. All rights reserved.
+Copyright © 2025 MCFactory Authors. All rights reserved.

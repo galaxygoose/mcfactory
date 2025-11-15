@@ -1,24 +1,24 @@
 # Command Line Interface (CLI)
 
-MCF provides a comprehensive command-line interface for managing configurations, running pipelines, and performing AI operations directly from the terminal. The CLI offers both interactive and scripted usage patterns for development and production workflows.
+mcfactory provides a comprehensive command-line interface for managing configurations, running pipelines, and performing AI operations directly from the terminal. The CLI offers both interactive and scripted usage patterns for development and production workflows.
 
 ## Installation
 
-Install MCF globally to access the CLI:
+Install mcfactory globally to access the CLI:
 
 ```bash
-npm install -g mcf
+npm install -g mcfactory
 # or
-yarn global add mcf
+yarn global add mcfactory
 ```
 
 Verify installation:
 
 ```bash
-mcf --version
+mcfactory --version
 # Output: 1.0.0
 
-mcf --help
+mcfactory --help
 # Shows available commands
 ```
 
@@ -27,10 +27,10 @@ mcf --help
 Options available for all commands:
 
 ```bash
-mcf [command] [options]
+mcfactory [command] [options]
 
 Global Options:
-  -c, --config <path>     Path to config file (default: "./mcf.config.json")
+  -c, --config <path>     Path to config file (default: "./mcfactory.config.json")
   -v, --verbose           Enable verbose output
   -q, --quiet             Suppress non-error output
   -h, --help              Display help for command
@@ -41,22 +41,22 @@ Global Options:
 
 ### Initialize Configuration
 
-Create a new MCF configuration file:
+Create a new mcfactory configuration file:
 
 ```bash
 # Initialize with default settings
-mcf init
+mcfactory init
 
 # Initialize with specific provider
-mcf init --provider openai
+mcfactory init --provider openai
 
 # Initialize for specific use case
-mcf init --template translation
-mcf init --template moderation
-mcf init --template detection
+mcfactory init --template translation
+mcfactory init --template moderation
+mcfactory init --template detection
 
 # Interactive initialization
-mcf init --interactive
+mcfactory init --interactive
 ```
 
 **Options:**
@@ -67,12 +67,12 @@ mcf init --interactive
 
 **Example Output:**
 ```bash
-$ mcf init --provider openai
-✅ Created mcf.config.json
+$ mcfactory init --provider openai
+✅ Created mcfactory.config.json
 📝 Next steps:
    1. Set your OPENAI_API_KEY environment variable
-   2. Run 'mcf validate-config' to verify setup
-   3. Try 'mcf translate "Hello" es' to test
+   2. Run 'mcfactory validate-config' to verify setup
+   3. Try 'mcfactory translate "Hello" es' to test
 ```
 
 ### Validate Configuration
@@ -81,16 +81,16 @@ Check configuration file for errors and missing settings:
 
 ```bash
 # Validate current config
-mcf validate-config
+mcfactory validate-config
 
 # Validate specific config file
-mcf validate-config --config ./config/prod.json
+mcfactory validate-config --config ./config/prod.json
 
 # Validate with connectivity tests
-mcf validate-config --test-connection
+mcfactory validate-config --test-connection
 
 # Validate for specific environment
-mcf validate-config --env production
+mcfactory validate-config --env production
 ```
 
 **Options:**
@@ -101,7 +101,7 @@ mcf validate-config --env production
 
 **Example Output:**
 ```bash
-$ mcf validate-config --test-connection
+$ mcfactory validate-config --test-connection
 ✅ Configuration file is valid
 ✅ Provider 'openai' is configured
 ✅ API key is set (masked)
@@ -120,18 +120,18 @@ Run comprehensive system diagnostics:
 
 ```bash
 # Full system diagnosis
-mcf diagnose
+mcfactory diagnose
 
 # Quick health check
-mcf diagnose --quick
+mcfactory diagnose --quick
 
 # Diagnose specific component
-mcf diagnose --component providers
-mcf diagnose --component training
-mcf diagnose --component guardrails
+mcfactory diagnose --component providers
+mcfactory diagnose --component training
+mcfactory diagnose --component guardrails
 
 # Generate diagnostic report
-mcf diagnose --report ./diagnostics.html
+mcfactory diagnose --report ./diagnostics.html
 ```
 
 **Options:**
@@ -142,8 +142,8 @@ mcf diagnose --report ./diagnostics.html
 
 **Example Output:**
 ```bash
-$ mcf diagnose
-🔍 Running MCF system diagnostics...
+$ mcfactory diagnose
+🔍 Running mcfactory system diagnostics...
 
 ✅ Core modules loaded successfully
 ✅ Configuration validated
@@ -179,26 +179,26 @@ Run named pipelines or custom pipeline definitions:
 
 ```bash
 # Run named pipeline
-mcf run-pipeline content-moderation
+mcfactory run-pipeline content-moderation
 
 # Run with input data
-mcf run-pipeline translation-workflow --input "Hello world"
+mcfactory run-pipeline translation-workflow --input "Hello world"
 
 # Run pipeline from file
-mcf run-pipeline --file ./pipelines/custom.json
+mcfactory run-pipeline --file ./pipelines/custom.json
 
 # Run with custom parameters
-mcf run-pipeline content-analysis \
+mcfactory run-pipeline content-analysis \
   --input-file ./data/input.txt \
   --output-file ./results/output.json \
   --param targetLang=es \
   --param maxLength=100
 
 # Run in background
-mcf run-pipeline long-running-pipeline --background
+mcfactory run-pipeline long-running-pipeline --background
 
 # Run with debugging
-mcf run-pipeline complex-workflow --debug --verbose
+mcfactory run-pipeline complex-workflow --debug --verbose
 ```
 
 **Options:**
@@ -214,7 +214,7 @@ mcf run-pipeline complex-workflow --debug --verbose
 **Example Usage:**
 ```bash
 # Content processing pipeline
-$ mcf run-pipeline content-processing --input "User generated content"
+$ mcfactory run-pipeline content-processing --input "User generated content"
 ✅ Pipeline completed successfully
 📊 Results:
    - Moderation: safe
@@ -223,7 +223,7 @@ $ mcf run-pipeline content-processing --input "User generated content"
    - Processing time: 1.2s
 
 # Batch processing
-$ mcf run-pipeline batch-translation \
+$ mcfactory run-pipeline batch-translation \
   --input-file ./data/texts.txt \
   --output-file ./results/translations.json \
   --param targetLang=fr \
@@ -239,22 +239,22 @@ Show available pipelines and their status:
 
 ```bash
 # List all pipelines
-mcf pipelines
+mcfactory pipelines
 
 # List with details
-mcf pipelines --detailed
+mcfactory pipelines --detailed
 
 # Filter by status
-mcf pipelines --status active
-mcf pipelines --status failed
+mcfactory pipelines --status active
+mcfactory pipelines --status failed
 
 # Search pipelines
-mcf pipelines --search translation
+mcfactory pipelines --search translation
 ```
 
 **Example Output:**
 ```bash
-$ mcf pipelines --detailed
+$ mcfactory pipelines --detailed
 📋 Available Pipelines:
 
 1. content-moderation
@@ -285,16 +285,16 @@ Create new pipelines interactively or from templates:
 
 ```bash
 # Create from template
-mcf create-pipeline --template translation
+mcfactory create-pipeline --template translation
 
 # Interactive creation
-mcf create-pipeline --interactive
+mcfactory create-pipeline --interactive
 
 # Create from existing pipeline
-mcf create-pipeline --copy content-moderation --name my-custom-pipeline
+mcfactory create-pipeline --copy content-moderation --name my-custom-pipeline
 
 # Create from JSON specification
-mcf create-pipeline --spec ./pipeline-spec.json
+mcfactory create-pipeline --spec ./pipeline-spec.json
 ```
 
 ### Manage Pipeline Execution
@@ -303,18 +303,18 @@ Monitor and manage running pipelines:
 
 ```bash
 # List running pipelines
-mcf pipelines running
+mcfactory pipelines running
 
 # Stop a running pipeline
-mcf stop-pipeline <pipeline-id>
+mcfactory stop-pipeline <pipeline-id>
 
 # Get pipeline execution details
-mcf pipeline-status <pipeline-id>
+mcfactory pipeline-status <pipeline-id>
 
 # View pipeline logs
-mcf pipeline-logs <pipeline-id>
-mcf pipeline-logs <pipeline-id> --tail 50  # Last 50 lines
-mcf pipeline-logs <pipeline-id> --follow   # Follow logs
+mcfactory pipeline-logs <pipeline-id>
+mcfactory pipeline-logs <pipeline-id> --tail 50  # Last 50 lines
+mcfactory pipeline-logs <pipeline-id> --follow   # Follow logs
 ```
 
 ## AI Operation Commands
@@ -325,17 +325,17 @@ Perform translation operations directly:
 
 ```bash
 # Text translation
-mcf translate "Hello world" es
-mcf translate "Bonjour" en --source fr
+mcfactory translate "Hello world" es
+mcfactory translate "Bonjour" en --source fr
 
 # File translation
-mcf translate --input-file ./text.txt --output-file ./translated.txt --target es
+mcfactory translate --input-file ./text.txt --output-file ./translated.txt --target es
 
 # Batch translation
-mcf translate --batch ./texts.json --target fr --output ./results.json
+mcfactory translate --batch ./texts.json --target fr --output ./results.json
 
 # Voice translation
-mcf translate-voice ./audio.wav --target es --output ./translated.wav
+mcfactory translate-voice ./audio.wav --target es --output ./translated.wav
 ```
 
 **Translation Options:**
@@ -351,16 +351,16 @@ Moderate content directly:
 
 ```bash
 # Moderate text
-mcf moderate "This is some content to check"
+mcfactory moderate "This is some content to check"
 
 # Moderate file
-mcf moderate --input-file ./content.txt
+mcfactory moderate --input-file ./content.txt
 
 # Moderate image
-mcf moderate-image ./image.jpg
+mcfactory moderate-image ./image.jpg
 
 # Batch moderation
-mcf moderate --batch ./content-list.txt --output ./moderation-results.json
+mcfactory moderate --batch ./content-list.txt --output ./moderation-results.json
 ```
 
 ### Detection Commands
@@ -369,13 +369,13 @@ Detect AI-generated content:
 
 ```bash
 # Detect AI text
-mcf detect-ai "This might be AI-generated text"
+mcfactory detect-ai "This might be AI-generated text"
 
 # Detect fake voice
-mcf detect-voice ./audio.wav
+mcfactory detect-voice ./audio.wav
 
 # Batch detection
-mcf detect-ai --batch ./texts.txt --output ./detection-results.json
+mcfactory detect-ai --batch ./texts.txt --output ./detection-results.json
 ```
 
 ### Agent Commands
@@ -384,13 +384,13 @@ Use AI agents directly:
 
 ```bash
 # Summarize text
-mcf summarize "Long text to summarize..." --length medium
+mcfactory summarize "Long text to summarize..." --length medium
 
 # Analyze sentiment
-mcf sentiment "I love this product!"
+mcfactory sentiment "I love this product!"
 
 # Categorize content
-mcf categorize "JavaScript framework announcement" --tags technology,programming
+mcfactory categorize "JavaScript framework announcement" --tags technology,programming
 ```
 
 ## Training Commands
@@ -401,16 +401,16 @@ Manage training datasets:
 
 ```bash
 # Collect training data
-mcf collect-data --source api --days 7
+mcfactory collect-data --source api --days 7
 
 # Validate dataset
-mcf validate-dataset ./data/training.jsonl
+mcfactory validate-dataset ./data/training.jsonl
 
 # Export dataset
-mcf export-dataset ./data/training.jsonl --format huggingface --output ./exported/
+mcfactory export-dataset ./data/training.jsonl --format huggingface --output ./exported/
 
 # Generate dataset statistics
-mcf dataset-stats ./data/training.jsonl
+mcfactory dataset-stats ./data/training.jsonl
 ```
 
 ### Model Training
@@ -419,36 +419,36 @@ Train and fine-tune models:
 
 ```bash
 # Start training pipeline
-mcf train-model --dataset ./data/training.jsonl --model gpt-2
+mcfactory train-model --dataset ./data/training.jsonl --model gpt-2
 
 # Fine-tune existing model
-mcf fine-tune --base-model ./models/base --dataset ./data/fine-tune.jsonl
+mcfactory fine-tune --base-model ./models/base --dataset ./data/fine-tune.jsonl
 
 # Monitor training progress
-mcf training-status <training-id>
+mcfactory training-status <training-id>
 
 # Stop training
-mcf stop-training <training-id>
+mcfactory stop-training <training-id>
 ```
 
 ## System Management
 
 ### Service Management
 
-Control MCF services:
+Control mcfactory services:
 
 ```bash
 # Start MCP server
-mcf start-mcp --port 3001
+mcfactory start-mcp --port 3001
 
 # Stop MCP server
-mcf stop-mcp
+mcfactory stop-mcp
 
 # Restart services
-mcf restart
+mcfactory restart
 
 # Check service status
-mcf status
+mcfactory status
 ```
 
 ### Cache Management
@@ -457,14 +457,14 @@ Manage caching systems:
 
 ```bash
 # Clear all caches
-mcf clear-cache
+mcfactory clear-cache
 
 # Clear specific cache
-mcf clear-cache --type translation
-mcf clear-cache --type moderation
+mcfactory clear-cache --type translation
+mcfactory clear-cache --type moderation
 
 # Show cache statistics
-mcf cache-stats
+mcfactory cache-stats
 ```
 
 ### Log Management
@@ -473,23 +473,23 @@ Work with system logs:
 
 ```bash
 # View recent logs
-mcf logs
+mcfactory logs
 
 # View specific log file
-mcf logs --file error.log
+mcfactory logs --file error.log
 
 # Search logs
-mcf logs --search "ERROR" --last 24h
+mcfactory logs --search "ERROR" --last 24h
 
 # Export logs
-mcf logs --export ./logs/export.json --since "2024-01-01"
+mcfactory logs --export ./logs/export.json --since "2024-01-01"
 ```
 
 ## Advanced Usage
 
-### Scripting with MCF CLI
+### Scripting with mcfactory CLI
 
-Use MCF CLI in shell scripts:
+Use mcfactory CLI in shell scripts:
 
 ```bash
 #!/bin/bash
@@ -497,14 +497,14 @@ Use MCF CLI in shell scripts:
 # Process multiple files
 for file in ./content/*.txt; do
   echo "Processing $file..."
-  mcf run-pipeline content-moderation --input-file "$file" \
+  mcfactory run-pipeline content-moderation --input-file "$file" \
     --output-file "./processed/$(basename "$file")"
 done
 
 # Conditional processing
-result=$(mcf moderate "Check this content")
+result=$(mcfactory moderate "Check this content")
 if [[ $result == *"safe"* ]]; then
-  mcf translate "$content" es --output ./translated.txt
+  mcfactory translate "$content" es --output ./translated.txt
 else
   echo "Content flagged, skipping translation"
 fi
@@ -512,7 +512,7 @@ fi
 
 ### CI/CD Integration
 
-Integrate MCF CLI into CI/CD pipelines:
+Integrate mcfactory CLI into CI/CD pipelines:
 
 ```yaml
 # GitHub Actions example
@@ -530,14 +530,14 @@ jobs:
         with:
           node-version: '18'
           
-      - name: Install MCF
-        run: npm install -g mcf
+      - name: Install mcfactory
+        run: npm install -g mcfactory
         
       - name: Validate Configuration
-        run: mcf validate-config --test-connection
+        run: mcfactory validate-config --test-connection
         
       - name: Process Content
-        run: mcf run-pipeline content-processing \
+        run: mcfactory run-pipeline content-processing \
           --input-file ./content/input.txt \
           --output-file ./results/output.json
           
@@ -551,13 +551,13 @@ Use interactive commands for exploration:
 
 ```bash
 # Interactive pipeline builder
-mcf interactive pipeline
+mcfactory interactive pipeline
 
 # Interactive configuration editor
-mcf interactive config
+mcfactory interactive config
 
 # Interactive dataset explorer
-mcf interactive dataset ./data/training.jsonl
+mcfactory interactive dataset ./data/training.jsonl
 ```
 
 ## Configuration Examples
@@ -580,10 +580,10 @@ export MCF_RATE_LIMIT_REQUESTS_PER_MINUTE=1000
 ### Environment-Specific Setup
 ```bash
 # Staging
-mcf init --env staging --provider anthropic
+mcfactory init --env staging --provider anthropic
 
 # Production
-mcf init --env production --provider openai --backup anthropic
+mcfactory init --env production --provider openai --backup anthropic
 ```
 
 ## Troubleshooting
@@ -593,16 +593,16 @@ mcf init --env production --provider openai --backup anthropic
 **Command not found:**
 ```bash
 # Install globally
-npm install -g mcf
+npm install -g mcfactory
 
 # Or use npx
-npx mcf --version
+npx mcfactory --version
 ```
 
 **Configuration errors:**
 ```bash
 # Validate configuration
-mcf validate-config --verbose
+mcfactory validate-config --verbose
 
 # Check environment variables
 echo $OPENAI_API_KEY
@@ -611,30 +611,30 @@ echo $OPENAI_API_KEY
 **Memory issues:**
 ```bash
 # Increase Node.js memory limit
-NODE_OPTIONS="--max-old-space-size=4096" mcf run-pipeline large-dataset
+NODE_OPTIONS="--max-old-space-size=4096" mcfactory run-pipeline large-dataset
 ```
 
 **Rate limiting:**
 ```bash
 # Add delays between requests
-mcf run-pipeline batch-processing --delay 1000
+mcfactory run-pipeline batch-processing --delay 1000
 ```
 
 **Permission errors:**
 ```bash
 # Check file permissions
-ls -la ./mcf.config.json
+ls -la ./mcfactory.config.json
 
 # Fix permissions
-chmod 644 ./mcf.config.json
+chmod 644 ./mcfactory.config.json
 ```
 
 ## Best Practices
 
 ### Command Usage
 1. **Use appropriate verbosity**: Use `--verbose` for debugging, `--quiet` for scripts
-2. **Validate before running**: Always run `mcf validate-config` after configuration changes
-3. **Monitor resource usage**: Use `mcf diagnose` to check system health
+2. **Validate before running**: Always run `mcfactory validate-config` after configuration changes
+3. **Monitor resource usage**: Use `mcfactory diagnose` to check system health
 4. **Handle errors gracefully**: Check exit codes in scripts
 5. **Use batch operations**: Prefer batch processing for multiple items
 
@@ -649,7 +649,7 @@ chmod 644 ./mcf.config.json
 1. **Secure API keys**: Never commit API keys to version control
 2. **Use environment variables**: Store sensitive configuration in environment variables
 3. **Regular key rotation**: Rotate API keys regularly
-4. **Access controls**: Limit who can execute MCF commands
+4. **Access controls**: Limit who can execute mcfactory commands
 5. **Audit logging**: Enable audit logging for production systems
 
 ### Performance
@@ -659,4 +659,4 @@ chmod 644 ./mcf.config.json
 4. **Resource limits**: Set appropriate memory and CPU limits
 5. **Monitoring**: Monitor CLI performance and resource usage
 
-This comprehensive CLI provides powerful tools for managing MCF installations, running AI operations, and integrating MCF into development and production workflows.
+This comprehensive CLI provides powerful tools for managing mcfactory installations, running AI operations, and integrating mcfactory into development and production workflows.

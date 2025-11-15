@@ -10,8 +10,7 @@
   },
 
   "bin": {
-    "mcfactory": "dist/core/cli/mcf-cli.js",
-    "mcf": "dist/core/cli/mcf-cli.js"
+    "mcfactory": "dist/core/cli/mcf-cli.js"
   },
 
   "scripts": {
@@ -43,14 +42,14 @@
 
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/galaxygoose/mcf.git"
+    "url": "git+https://github.com/galaxygoose/mcfactory.git"
   },
 
   "bugs": {
-    "url": "https://github.com/galaxygoose/mcf/issues"
+    "url": "https://github.com/galaxygoose/mcfactory/issues"
   },
 
-  "homepage": "https://github.com/galaxygoose/mcf#readme",
+  "homepage": "https://github.com/galaxygoose/mcfactory#readme",
 
   "engines": {
     "node": ">=18.0.0"
