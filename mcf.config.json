@@ -1,0 +1,7 @@
+{
+  "providers": {},
+  "defaults": {},
+  "guardrails": {
+    "enabled": true
+  }
+}

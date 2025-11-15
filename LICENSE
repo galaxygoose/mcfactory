@@ -1,0 +1,36 @@
+MCF ALPHA LICENSE v0.1
+
+Effective Date: November 14, 2025
+
+This is the license for the Alpha release of the Model Context Factory (MCF).  
+By using the software ("MCF"), you agree to the following terms:
+
+1. Permitted Use  
+You may use, modify, and integrate MCF into your personal or commercial projects if your total revenue from all products or services using MCF is less than 10,000 USD per month.
+
+2. No Resale or Repackaging  
+You may not sell, license, distribute, or repackage MCF itself.  
+You may not offer MCF as a competing SDK, framework, API, or toolkit.  
+You may not resell or redistribute MCF in a way that competes with the original project.
+
+3. Attribution  
+If you use MCF in a commercial product, a visible acknowledgment of "Powered by the Model Context Factory (MCF)" must appear in documentation or an About section.
+
+4. Restrictions  
+You may not remove copyright notices.  
+You may not claim ownership of MCF.  
+You may not use MCF to train or improve any model that competes with the MCF framework.
+
+5. Enterprise or High-Revenue Use  
+If your total revenue from products using MCF reaches or exceeds 10,000 USD per month, you must obtain a commercial license. Contact the MCF team for details.
+
+6. No Warranty  
+MCF is provided "as is" without any warranties or guarantees of performance, safety, or fitness for purpose.
+
+7. Limitation of Liability  
+The authors are not liable for damages, loss of revenue, or data loss arising from the use of MCF.
+
+8. Termination  
+Violation of this license terminates your rights to use MCF.
+
+Copyright © 2025 MCF Authors. All rights reserved.

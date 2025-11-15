@@ -1,0 +1,57 @@
+{
+  "name": "mcf",
+  "version": "0.1.0-alpha",
+  "description": "Model Context Factory - A comprehensive framework for AI model interactions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "mcf": "dist/cli/mcf-cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "cli": "ts-node src/core/cli/mcf-cli.ts"
+  },
+  "keywords": ["ai", "ml", "models", "factory", "mcp", "typescript"],
+  "author": "MCF Team",
+  "license": "SEE LICENSE",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "ts-node": "^10.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "commander": "^11.0.0",
+    "axios": "^1.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/mcf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/mcf/issues"
+  },
+  "homepage": "https://github.com/your-org/mcf#readme"
+}

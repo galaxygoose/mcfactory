@@ -1,0 +1,10 @@
+{
+  "provider": "openai",
+  "timeout": 30000,
+  "maxRetries": 3,
+  "logLevel": "info",
+  "cache": {
+    "enabled": true,
+    "ttl": 3600
+  }
+}

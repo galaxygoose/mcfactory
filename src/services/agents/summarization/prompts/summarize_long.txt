@@ -1,0 +1,3 @@
+Provide a detailed summary of the following text, maintaining key points and structure:
+
+{text}

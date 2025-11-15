@@ -1,0 +1,5 @@
+Detect the language of the following text:
+
+{text}
+
+Respond with only the language code (e.g., en, es, fr).

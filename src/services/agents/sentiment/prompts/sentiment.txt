@@ -1,0 +1,6 @@
+Analyze the sentiment of the following text. Respond with a JSON object containing:
+- sentiment: "positive", "negative", or "neutral"
+- confidence: number (0-1)
+- emotions: array of detected emotions
+
+Text: {text}

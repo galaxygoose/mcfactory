@@ -1,0 +1,9 @@
+src/
+tests/
+docs/
+*.log
+*.test.ts
+*.spec.ts
+coverage/
+temp_tree.txt
+file_list.txt

@@ -1,0 +1,8 @@
+Analyze the following text for content that violates safety policies:
+
+{text}
+
+Respond with a JSON object containing:
+- flagged: boolean
+- categories: array of violated categories
+- confidence: number (0-1)
