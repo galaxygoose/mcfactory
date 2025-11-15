@@ -10,9 +10,9 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // Initialize providers
-import './src/index';
+import '../src/index';
 
-import { ProviderRegistry } from './src/core/providers/providerRegistry';
+import { ProviderRegistry } from '../src/core/providers/providerRegistry';
 
 async function testOpenAIProvider() {
   console.log('🧪 Testing OpenAI Provider with Real API Key\n');

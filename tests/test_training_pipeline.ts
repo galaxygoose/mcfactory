@@ -10,19 +10,19 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // Initialize providers (this ensures all AI providers are registered)
-import './src/index';
+import '../src/index';
 
 
-import { collectFromFactories } from './src/core/training/collectFromFactories';
-import { generateLabels } from './src/core/training/labelGenerator';
-import { formatJSONL } from './src/core/training/jsonlFormatter';
-import { formatCSV } from './src/core/training/csvFormatter';
-import { formatParquet } from './src/core/training/parquetFormatter';
-import { manageShards } from './src/core/training/shardManager';
-import { generateEmbeddingsForExamples } from './src/core/training/embeddingGenerator';
-import { validateDataset } from './src/core/training/datasetValidator';
-import { generateManifest } from './src/core/training/trainingManifestGenerator';
-import { scheduleExport, runExport } from './src/core/training/exportScheduler';
+import { collectFromFactories } from '../src/core/training/collectFromFactories';
+import { generateLabels } from '../src/core/training/labelGenerator';
+import { formatJSONL } from '../src/core/training/jsonlFormatter';
+import { formatCSV } from '../src/core/training/csvFormatter';
+import { formatParquet } from '../src/core/training/parquetFormatter';
+import { manageShards } from '../src/core/training/shardManager';
+import { generateEmbeddingsForExamples } from '../src/core/training/embeddingGenerator';
+import { validateDataset } from '../src/core/training/datasetValidator';
+import { generateManifest } from '../src/core/training/trainingManifestGenerator';
+import { scheduleExport, runExport } from '../src/core/training/exportScheduler';
 
 async function testTrainingPipeline() {
   console.log('🧪 Testing MCF Training Pipeline End-to-End\n');
@@ -63,11 +63,11 @@ async function testTrainingPipeline() {
 
     // JSONL format
     const jsonlData = formatJSONL(shardedData.shards[0]);
-    console.log(`✅ JSONL format: ${jsonlData.split('\n').filter(line => line.trim()).length} lines`);
+    console.log(`✅ JSONL format: ${jsonlData.split('\n').filter((line: string) => line.trim()).length} lines`);
 
     // CSV format
     const csvData = formatCSV(shardedData.shards[0]);
-    console.log(`✅ CSV format: ${csvData.split('\n').filter(line => line.trim()).length} rows`);
+    console.log(`✅ CSV format: ${csvData.split('\n').filter((line: string) => line.trim()).length} rows`);
 
     // Parquet format (structured data)
     const parquetData = formatParquet(shardedData.shards[0]);

@@ -2,9 +2,14 @@
 // Other agents must implement logic INSIDE this file only.
 // Do NOT create or delete files. Respect the MIC + MIM.
 
-export function detectAdversarialInput(text: string): boolean {
+import { GuardrailResult } from '../../types';
+
+export function detectAdversarialInput(text: string): GuardrailResult {
+  const reasons: string[] = [];
+
   if (!text || typeof text !== 'string') {
-    return false;
+    reasons.push('Invalid input: text must be a non-empty string');
+    return { safe: false, reasons };
   }
 
   const lowerText = text.toLowerCase();
@@ -45,24 +50,25 @@ export function detectAdversarialInput(text: string): boolean {
 
   // Check text length - extremely long inputs might be adversarial
   if (text.length > 10000) {
-    return true;
+    reasons.push('Input text is excessively long (>10000 characters)');
   }
 
   // Check for pattern matches
   for (const pattern of adversarialPatterns) {
     if (pattern.test(lowerText)) {
-      return true;
+      reasons.push('Detected adversarial pattern in input');
+      break; // Only add once
     }
   }
 
   // Check for high entropy (suspicious randomness)
   const entropy = calculateShannonEntropy(text);
   if (entropy > 4.5) { // High entropy threshold
-    return true;
+    reasons.push('High entropy detected - potential obfuscated content');
   }
 
   // Check for unusual character distribution
-  const charCounts = {};
+  const charCounts: Record<string, number> = {};
   for (const char of text) {
     charCounts[char] = (charCounts[char] || 0) + 1;
   }
@@ -72,14 +78,17 @@ export function detectAdversarialInput(text: string): boolean {
 
   // Very high unique character ratio might indicate obfuscation
   if (uniqueChars / totalChars > 0.8 && totalChars > 100) {
-    return true;
+    reasons.push('Unusual character distribution - potential obfuscation');
   }
 
-  return false;
+  return {
+    safe: reasons.length === 0,
+    reasons: reasons.length > 0 ? reasons : undefined
+  };
 }
 
 function calculateShannonEntropy(text: string): number {
-  const charCounts = {};
+  const charCounts: Record<string, number> = {};
   for (const char of text) {
     charCounts[char] = (charCounts[char] || 0) + 1;
   }

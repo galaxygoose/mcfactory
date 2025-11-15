@@ -86,27 +86,29 @@ export class Workflow {
           return { ...data, moderation: moderationResult };
 
         case 'summarize':
-          const agentFactory = new AgentFactory();
+          const agentFactorySummarize = new AgentFactory();
           const summarizationInput = {
             text: data,
             length: step.options?.length || 'medium'
           };
-          const summarizationResult = await agentFactory.run(summarizationInput, options);
+          const summarizationResult = await agentFactorySummarize.run(summarizationInput, options);
           logs.push(`Summarization completed: ${summarizationResult.summary.substring(0, 50)}...`);
           return summarizationResult.summary;
 
         case 'categorize':
+          const agentFactoryCategorize = new AgentFactory();
           const categorizationInput = {
             text: data,
             tags: step.options?.tags
           };
-          const categorizationResult = await agentFactory.run(categorizationInput, options);
+          const categorizationResult = await agentFactoryCategorize.run(categorizationInput, options);
           logs.push(`Categorization completed: ${categorizationResult.tags.join(', ')}`);
           return { ...data, categories: categorizationResult.tags };
 
         case 'sentiment':
+          const agentFactorySentiment = new AgentFactory();
           const sentimentInput = { text: data, type: 'sentiment' };
-          const sentimentResult = await agentFactory.run(sentimentInput, options);
+          const sentimentResult = await agentFactorySentiment.run(sentimentInput, options);
           logs.push(`Sentiment analysis completed: ${sentimentResult.label} (${sentimentResult.score})`);
           return { ...data, sentiment: sentimentResult };
 
@@ -131,39 +133,42 @@ export class Workflow {
           return data;
 
         case 'stt':
-          const mediaFactory = new MediaFactory();
+          const mediaFactorySTT = new MediaFactory();
           const sttInput = {
             audioBuffer: data,
             language: step.options?.language
           };
-          const sttResult = await mediaFactory.run(sttInput, options);
+          const sttResult = await mediaFactorySTT.run(sttInput, options);
           logs.push(`Speech-to-text completed: ${sttResult.text.substring(0, 50)}...`);
           return sttResult.text;
 
         case 'tts':
+          const mediaFactoryTTS = new MediaFactory();
           const ttsInput = {
             text: data,
             voice: step.options?.voice
           };
-          const ttsResult = await mediaFactory.run(ttsInput, options);
+          const ttsResult = await mediaFactoryTTS.run(ttsInput, options);
           logs.push(`Text-to-speech completed`);
           return ttsResult.audioBuffer;
 
         case 'ocr':
+          const mediaFactoryOCR = new MediaFactory();
           const ocrInput = {
             imageBuffer: data,
-            type: 'ocr'
+            type: 'ocr' as const
           };
-          const ocrResult = await mediaFactory.run(ocrInput, options);
+          const ocrResult = await mediaFactoryOCR.run(ocrInput, options);
           logs.push(`OCR completed: ${ocrResult.text.substring(0, 50)}...`);
           return ocrResult.text;
 
         case 'caption':
+          const mediaFactoryCaption = new MediaFactory();
           const captionInput = {
             imageBuffer: data,
-            type: 'caption'
+            type: 'caption' as const
           };
-          const captionResult = await mediaFactory.run(captionInput, options);
+          const captionResult = await mediaFactoryCaption.run(captionInput, options);
           logs.push(`Image caption completed: ${captionResult.caption}`);
           return captionResult.caption;
 
