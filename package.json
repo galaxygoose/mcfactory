@@ -1,6 +1,6 @@
 {
   "name": "mcfactory",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha",
   "description": "Model Context Factory – a unified AI framework for providers, workflows, guardrails, media processing, and training pipelines.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
