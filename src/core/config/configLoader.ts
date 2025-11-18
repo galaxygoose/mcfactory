@@ -4,12 +4,12 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { MCFactoryConfig } from '../../types';
+import { MCFACTORYConfig } from '../../types';
 
 const CONFIG_PATH = 'mcf.config.json';
 
 export class ConfigLoader {
-  static load(): MCFactoryConfig {
+  static load(): MCFACTORYConfig {
     try {
       const configPath = path.resolve(CONFIG_PATH);
       if (!fs.existsSync(configPath)) {
@@ -19,7 +19,7 @@ export class ConfigLoader {
       const configContent = fs.readFileSync(configPath, 'utf8');
       const config = JSON.parse(configContent);
 
-      return config as MCFactoryConfig;
+      return config as MCFACTORYConfig;
     } catch (error) {
       throw new Error(`Failed to load configuration: ${error}`);
     }

@@ -1,6 +1,6 @@
 # Content Moderation
 
-MCF provides comprehensive content moderation capabilities to ensure safe and compliant AI interactions. The moderation system analyzes text and images for harmful, inappropriate, or unsafe content using multiple detection techniques and configurable safety policies.
+MCFACTORY provides comprehensive content moderation capabilities to ensure safe and compliant AI interactions. The moderation system analyzes text and images for harmful, inappropriate, or unsafe content using multiple detection techniques and configurable safety policies.
 
 ## Text Moderation
 
@@ -50,7 +50,7 @@ if (!result.safe) {
 
 ### Moderation Categories
 
-MCF supports comprehensive content categories:
+MCFACTORY supports comprehensive content categories:
 
 | Category | Description | Examples |
 |----------|-------------|----------|
@@ -471,7 +471,7 @@ class ContentManager {
 
 ## Configuration
 
-Configure moderation behavior through MCF configuration:
+Configure moderation behavior through MCFACTORY configuration:
 
 ```json
 {
@@ -547,4 +547,4 @@ Moderation supports various compliance requirements:
 - **Industry Standards**: Follow industry best practices for content moderation
 - **Ethical AI**: Ensure responsible and unbiased moderation decisions
 
-This comprehensive moderation system ensures MCF applications can safely handle user-generated content while maintaining compliance and user trust.
+This comprehensive moderation system ensures MCFACTORY applications can safely handle user-generated content while maintaining compliance and user trust.

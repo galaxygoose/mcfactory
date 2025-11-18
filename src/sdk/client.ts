@@ -5,12 +5,12 @@
 import { translateText } from '../services/translation/text/translateText';
 import { detectAI } from '../services/detection/text/detectAI';
 import { moderateText } from '../services/moderation/text/moderateText';
-import { TranslationResult, DetectionResult, ModerationResult, MCFactoryConfig } from './interfaces';
+import { TranslationResult, DetectionResult, ModerationResult, MCFACTORYConfig } from './interfaces';
 
-export class MCFactory {
-  private config?: MCFactoryConfig;
+export class MCFACTORY {
+  private config?: MCFACTORYConfig;
 
-  constructor(config?: MCFactoryConfig) {
+  constructor(config?: MCFACTORYConfig) {
     this.config = config;
   }
 
@@ -76,7 +76,7 @@ export class MCFactory {
   }
 
   // Method to update configuration
-  updateConfig(config: MCFactoryConfig): void {
+  updateConfig(config: MCFACTORYConfig): void {
     this.config = config;
   }
 }

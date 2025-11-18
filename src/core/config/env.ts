@@ -2,10 +2,10 @@
 // Other agents must implement logic INSIDE this file only.
 // Do NOT create or delete files. Respect the MIC + MIM.
 
-import { MCFactoryEnvironment } from '../../types';
+import { MCFACTORYEnvironment } from '../../types';
 
 export class EnvConfig {
-  static get(): MCFactoryEnvironment {
+  static get(): MCFACTORYEnvironment {
     return {
       OPENAI_API_KEY: process.env.OPENAI_API_KEY,
       ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,

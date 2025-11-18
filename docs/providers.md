@@ -1,6 +1,6 @@
 # Providers
 
-MCF Providers are the abstraction layer that handles communication with various AI service providers. The provider system enables seamless switching between different AI services while maintaining consistent interfaces.
+MCFACTORY Providers are the abstraction layer that handles communication with various AI service providers. The provider system enables seamless switching between different AI services while maintaining consistent interfaces.
 
 ## Provider Architecture
 
@@ -324,7 +324,7 @@ const response = await provider.callModel({
 
 ### Automatic Provider Selection
 
-MCF automatically selects providers based on:
+MCFACTORY automatically selects providers based on:
 
 - Task requirements and capabilities
 - Performance characteristics

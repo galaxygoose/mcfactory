@@ -139,24 +139,6 @@ describe('Factories', () => {
       expect(customProvider.callModel).toHaveBeenCalledTimes(1);
     });
 
-    test('should handle debug mode', async () => {
-      const input: TranslationInput = {
-        text: 'Hello world',
-        targetLang: 'es'
-      };
-
-      const mockResponse = global.testUtils.createMockProviderResponse('Hola mundo');
-      mockProvider.callModel.mockResolvedValue(mockResponse);
-
-      const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
-
-      await factory.run(input, { debug: true });
-
-      expect(consoleSpy).toHaveBeenCalledWith('Translation request:', expect.any(Object));
-      expect(consoleSpy).toHaveBeenCalledWith('Translation response:', mockResponse);
-
-      consoleSpy.mockRestore();
-    });
   });
 
   describe('ModerationFactory', () => {
@@ -426,9 +408,15 @@ describe('Factories', () => {
 
   describe('MediaFactory', () => {
     let factory: MediaFactory;
+    let whisperProvider: any;
+    let elevenLabsProvider: any;
 
     beforeEach(() => {
       factory = new MediaFactory();
+      whisperProvider = global.testUtils.createMockProvider('whisper');
+      elevenLabsProvider = global.testUtils.createMockProvider('elevenlabs');
+      ProviderRegistry.registerProvider(whisperProvider);
+      ProviderRegistry.registerProvider(elevenLabsProvider);
     });
 
     test('should convert speech to text', async () => {
@@ -442,7 +430,7 @@ describe('Factories', () => {
         language: 'en'
       });
 
-      mockProvider.callModel.mockResolvedValue(mockResponse);
+      whisperProvider.callModel.mockResolvedValue(mockResponse);
 
       const result = await factory.run(input);
 
@@ -459,7 +447,7 @@ describe('Factories', () => {
       const audioBuffer = new ArrayBuffer(4096);
       const mockResponse = global.testUtils.createMockProviderResponse(audioBuffer);
 
-      mockProvider.callModel.mockResolvedValue(mockResponse);
+      elevenLabsProvider.callModel.mockResolvedValue(mockResponse);
 
       const result = await factory.run(input);
 

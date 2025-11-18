@@ -1,6 +1,6 @@
 # Agents
 
-MCF Agents provide intelligent text processing capabilities through specialized AI models. Agents use the factory pattern to route requests to appropriate providers while maintaining consistent interfaces.
+MCFACTORY Agents provide intelligent text processing capabilities through specialized AI models. Agents use the factory pattern to route requests to appropriate providers while maintaining consistent interfaces.
 
 ## Available Agents
 
@@ -185,7 +185,7 @@ try {
 
 ## Configuration
 
-Configure agent behavior through the MCF config:
+Configure agent behavior through the MCFACTORY config:
 
 ```json
 {
@@ -209,7 +209,7 @@ Configure agent behavior through the MCF config:
 
 ## Integration with Workflows
 
-Agents integrate seamlessly with MCF workflows for complex processing pipelines:
+Agents integrate seamlessly with MCFACTORY workflows for complex processing pipelines:
 
 ```typescript
 import { WorkflowFactory } from '../core/factories/WorkflowFactory';

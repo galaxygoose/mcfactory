@@ -1,12 +1,12 @@
 # Error Handling
 
-MCF provides comprehensive error handling mechanisms designed for reliability, observability, and graceful degradation. The error handling system follows consistent patterns across all layers and provides actionable error information for debugging and recovery.
+MCFACTORY provides comprehensive error handling mechanisms designed for reliability, observability, and graceful degradation. The error handling system follows consistent patterns across all layers and provides actionable error information for debugging and recovery.
 
 ## Error Architecture
 
 ### Error Types
 
-MCF defines specific error types for different categories of failures:
+MCFACTORY defines specific error types for different categories of failures:
 
 #### Provider Errors
 ```typescript
@@ -52,7 +52,7 @@ interface WorkflowError extends Error {
 
 ## Error Propagation
 
-Errors flow through MCF layers with appropriate context addition:
+Errors flow through MCFACTORY layers with appropriate context addition:
 
 ```
 User Code → Service → Factory → Provider → AI API
@@ -100,7 +100,7 @@ try {
 
 ### Retry Logic
 
-MCF implements sophisticated retry mechanisms:
+MCFACTORY implements sophisticated retry mechanisms:
 
 #### Exponential Backoff
 ```typescript
@@ -251,7 +251,7 @@ async function processContent(content: string) {
 
 ### Transient vs Permanent Errors
 
-MCF classifies errors to determine appropriate handling:
+MCFACTORY classifies errors to determine appropriate handling:
 
 ```typescript
 function classifyError(error: any): 'transient' | 'permanent' | 'unknown' {
@@ -297,7 +297,7 @@ function getErrorSeverity(error: any): ErrorSeverity {
 
 ### Structured Logging
 
-MCF provides structured error logging:
+MCFACTORY provides structured error logging:
 
 ```typescript
 interface ErrorLog {
@@ -707,4 +707,4 @@ class BatchErrorHandler {
 }
 ```
 
-This comprehensive error handling system ensures MCF applications are robust, observable, and user-friendly when failures occur.
+This comprehensive error handling system ensures MCFACTORY applications are robust, observable, and user-friendly when failures occur.

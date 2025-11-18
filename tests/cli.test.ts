@@ -49,7 +49,7 @@ describe('CLI', () => {
         expect.stringContaining('"providers": {}')
       );
       expect(mockConsoleLog).toHaveBeenCalledWith(
-        expect.stringContaining('Created default MCF configuration')
+        expect.stringContaining('Created default MCFACTORY configuration')
       );
     });
 
@@ -60,7 +60,7 @@ describe('CLI', () => {
 
       expect(mockFs.writeFileSync).not.toHaveBeenCalled();
       expect(mockConsoleLog).toHaveBeenCalledWith(
-        expect.stringContaining('MCF configuration already exists')
+        expect.stringContaining('MCFACTORY configuration already exists')
       );
     });
 
@@ -73,7 +73,7 @@ describe('CLI', () => {
       initCommand();
 
       expect(mockConsoleError).toHaveBeenCalledWith(
-        '✗ Failed to initialize MCF configuration:',
+        '✗ Failed to initialize MCFACTORY configuration:',
         expect.any(Error)
       );
       expect(mockProcessExit).toHaveBeenCalledWith(1);
@@ -185,7 +185,7 @@ describe('CLI', () => {
       diagnoseCommand();
 
       expect(mockConsoleLog).toHaveBeenCalledWith(
-        expect.stringContaining('🔍 MCF System Diagnostics')
+        expect.stringContaining('🔍 MCFACTORY System Diagnostics')
       );
       expect(mockConsoleLog).toHaveBeenCalledWith(
         expect.stringContaining('Node.js version')

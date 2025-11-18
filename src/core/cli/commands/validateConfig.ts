@@ -3,7 +3,7 @@
 // Do NOT create or delete files. Respect the MIC + MIM.
 
 import * as fs from 'fs';
-import { MCFactoryConfig, ProviderName } from '../../../types';
+import { MCFACTORYConfig, ProviderName } from '../../../types';
 import { ConfigLoader } from '../../config/configLoader';
 import { CONFIG_SCHEMA } from '../../config/configSchema';
 
@@ -24,7 +24,7 @@ export function validateConfigCommand(): void {
     }
 
     // Load config
-    const config = ConfigLoader.load() as MCFactoryConfig;
+    const config = ConfigLoader.load() as MCFACTORYConfig;
     const errors: ValidationError[] = [];
 
     // Validate structure

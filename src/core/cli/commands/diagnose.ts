@@ -4,7 +4,7 @@
 
 import * as fs from 'fs';
 import * as os from 'os';
-import { MCFactoryConfig } from '../../../types';
+import { MCFACTORYConfig } from '../../../types';
 import { ConfigLoader } from '../../config/configLoader';
 
 const CONFIG_PATH = 'mcf.config.json';
@@ -47,7 +47,7 @@ export function diagnoseCommand(): void {
   // Check config loading
   if (configExists) {
     try {
-      const config = ConfigLoader.load() as MCFactoryConfig;
+      const config = ConfigLoader.load() as MCFACTORYConfig;
       results.push({
         name: 'Config Loading',
         status: 'PASS',

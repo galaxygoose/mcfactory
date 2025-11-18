@@ -1,10 +1,10 @@
 # MCP Tools
 
-MCF integrates with the Model Context Protocol (MCP) to provide standardized AI tool interfaces that can be used across different MCP-compatible clients and applications. MCP tools enable seamless AI interactions while maintaining consistency and security.
+MCFACTORY integrates with the Model Context Protocol (MCP) to provide standardized AI tool interfaces that can be used across different MCP-compatible clients and applications. MCP tools enable seamless AI interactions while maintaining consistency and security.
 
 ## Overview
 
-The Model Context Protocol (MCP) is a standardized interface for connecting AI models to external tools and data sources. MCF implements MCP server functionality, exposing AI capabilities as MCP tools that can be discovered and invoked by MCP clients.
+The Model Context Protocol (MCP) is a standardized interface for connecting AI models to external tools and data sources. MCFACTORY implements MCP server functionality, exposing AI capabilities as MCP tools that can be discovered and invoked by MCP clients.
 
 ### Key Benefits
 - **Standardization**: Consistent tool interface across different AI applications
@@ -17,15 +17,15 @@ The Model Context Protocol (MCP) is a standardized interface for connecting AI m
 
 ### MCP Server Implementation
 
-MCF runs as an MCP server that exposes AI capabilities through standardized tool interfaces:
+MCFACTORY runs as an MCP server that exposes AI capabilities through standardized tool interfaces:
 
 ```
-MCP Client ←→ MCP Protocol ←→ MCF MCP Server ←→ MCF Services
+MCP Client ←→ MCP Protocol ←→ MCFACTORY MCP Server ←→ MCFACTORY Services
 ```
 
 ### Tool Registration
 
-Tools are automatically registered with the MCP server based on MCF service configurations:
+Tools are automatically registered with the MCP server based on MCFACTORY service configurations:
 
 ```typescript
 import { MCPServer } from '../core/mcp/MCPServer';
@@ -37,7 +37,7 @@ const mcpServer = new MCPServer({
   allowedOrigins: ['http://localhost:3000']
 });
 
-// Register MCF tools
+// Register MCFACTORY tools
 MCFToolRegistry.registerAllTools(mcpServer);
 
 // Start server
@@ -46,7 +46,7 @@ await mcpServer.start();
 
 ## Available Tools
 
-MCF provides comprehensive MCP tools covering all major AI capabilities:
+MCFACTORY provides comprehensive MCP tools covering all major AI capabilities:
 
 ### Translation Tools
 
@@ -452,7 +452,7 @@ Generate captions for images.
 
 ## Configuration
 
-Configure MCP server settings in your MCF configuration:
+Configure MCP server settings in your MCFACTORY configuration:
 
 ```json
 {
@@ -559,7 +559,7 @@ Configure which tools are available to different clients:
 
 ### Claude Desktop Integration
 
-Configure Claude Desktop to use MCF MCP tools:
+Configure Claude Desktop to use MCFACTORY MCP tools:
 
 ```json
 // ~/Library/Application Support/Claude/claude_desktop_config.json (macOS)
@@ -581,12 +581,12 @@ Configure Claude Desktop to use MCF MCP tools:
 
 ### Custom MCP Client
 
-Create custom clients that interact with MCF MCP tools:
+Create custom clients that interact with MCFACTORY MCP tools:
 
 ```typescript
 import { MCPClient } from 'mcp-client';
 
-class MCFMCPClient {
+class MCFACTORYMCPClient {
   private client: MCPClient;
 
   constructor(serverUrl: string) {
@@ -618,7 +618,7 @@ class MCFMCPClient {
 }
 
 // Usage
-const mcfClient = new MCFMCPClient('http://localhost:3001');
+const mcfClient = new MCFACTORYMCPClient('http://localhost:3001');
 const translation = await mcfClient.translateText('Hello world', 'es');
 ```
 
@@ -817,4 +817,4 @@ const result = await mcpClient.executeChain('content-processing-chain', {
 });
 ```
 
-This comprehensive MCP integration enables MCF to provide standardized, secure, and interoperable AI tools that work seamlessly across different applications and clients.
+This comprehensive MCP integration enables MCFACTORY to provide standardized, secure, and interoperable AI tools that work seamlessly across different applications and clients.

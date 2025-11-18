@@ -1,6 +1,6 @@
 # Architecture
 
-MCFactory (Model Context Factory) follows a layered, modular architecture designed for extensibility, maintainability, and reliable AI operations. This document explains the core architectural principles, including the Master Interface Contract (MIC) and Master Import Map (MIM).
+MCFACTORY follows a layered, modular architecture designed for extensibility, maintainability, and reliable AI operations. This document explains the core architectural principles, including the Master Interface Contract (MIC) and Master Import Map (MIM).
 
 ## Core Principles
 
@@ -21,7 +21,7 @@ Processing units follow the factory pattern for standardized AI task execution.
 
 ## Master Interface Contract (MIC)
 
-The MIC defines every shared type, interface, enum, and contract that ALL modules must follow. It is the single source of truth for MCF's architecture.
+The MIC defines every shared type, interface, enum, and contract that ALL modules must follow. It is the single source of truth for MCFACTORY's architecture.
 
 ### Purpose
 - **Consistency**: Ensures all modules speak the same language
@@ -33,7 +33,7 @@ The MIC defines every shared type, interface, enum, and contract that ALL module
 
 #### Environment & Configuration
 ```typescript
-interface MCFEnvironment {
+interface MCFACTORYEnvironment {
   OPENAI_API_KEY?: string;
   ANTHROPIC_API_KEY?: string;
   GEMINI_API_KEY?: string;
@@ -43,7 +43,7 @@ interface MCFEnvironment {
   [key: string]: string | undefined;
 }
 
-interface MCFConfig {
+interface MCFACTORYConfig {
   providers: ProviderConfigMap;
   defaults: DefaultModuleConfig;
   pipelines?: Record<string, PipelineDefinition>;
@@ -223,7 +223,7 @@ The safety layer provides comprehensive protection mechanisms.
 
 ### 6. SDK & CLI Layer
 
-The interface layer provides access to MCF functionality.
+The interface layer provides access to MCFACTORY functionality.
 
 #### Responsibilities
 - Programmatic API exposure
@@ -232,7 +232,7 @@ The interface layer provides access to MCF functionality.
 - Error handling and user feedback
 
 #### Components
-- `MCF` SDK class
+- `MCFACTORY` SDK class
 - CLI commands and argument parsing
 - Configuration loaders and validators
 

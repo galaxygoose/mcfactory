@@ -1,6 +1,6 @@
 # Training Datasets
 
-MCF provides comprehensive training data management capabilities for collecting, formatting, validating, and exporting datasets for AI model training. The training system supports multiple data formats and integrates with popular machine learning frameworks.
+MCFACTORY provides comprehensive training data management capabilities for collecting, formatting, validating, and exporting datasets for AI model training. The training system supports multiple data formats and integrates with popular machine learning frameworks.
 
 ## Data Collection
 
@@ -9,7 +9,7 @@ Collect training data from various sources and interactions to build comprehensi
 ### Collection Sources
 
 #### API-Based Collection
-Automatically collect data from MCF API interactions:
+Automatically collect data from MCFACTORY API interactions:
 
 ```typescript
 import { TrainingDataCollector } from '../services/training/dataCollector';
@@ -573,7 +573,7 @@ console.log(`Task distribution:`, stats.taskDistribution);
 
 ## Configuration
 
-Configure training data management through MCF configuration:
+Configure training data management through MCFACTORY configuration:
 
 ```json
 {
@@ -670,7 +670,7 @@ const syntheticGenerator = {
     for (let i = 0; i < count; i++) {
       const seed = seedData[Math.floor(Math.random() * seedData.length)];
 
-      // Generate variations using MCF
+      // Generate variations using MCFACTORY
       const variation1 = await translateText(seed.input, 'es');
       const variation2 = await summarizeText(seed.input, 'short');
 
@@ -717,4 +717,4 @@ const continuousLearner = {
 setInterval(() => continuousLearner.updateModel(), 60 * 60 * 1000);
 ```
 
-This comprehensive training dataset management system ensures MCF can effectively collect, process, validate, and utilize training data for building and improving AI models.
+This comprehensive training dataset management system ensures MCFACTORY can effectively collect, process, validate, and utilize training data for building and improving AI models.

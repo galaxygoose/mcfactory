@@ -1,6 +1,6 @@
 # Guardrails
 
-MCF Guardrails provide comprehensive safety measures to ensure responsible AI usage. The guardrails system integrates throughout the MCF framework, providing input validation, content filtering, hallucination detection, and risk assessment capabilities.
+MCFACTORY Guardrails provide comprehensive safety measures to ensure responsible AI usage. The guardrails system integrates throughout the MCFACTORY framework, providing input validation, content filtering, hallucination detection, and risk assessment capabilities.
 
 ## Core Concepts
 
@@ -268,7 +268,7 @@ if (!hallucinationCheck.safe) {
 
 ## Guardrail Integration in Workflows
 
-Guardrails integrate seamlessly into MCF workflows and pipelines.
+Guardrails integrate seamlessly into MCFACTORY workflows and pipelines.
 
 ### Pre-Processing Guardrails
 
@@ -318,7 +318,7 @@ const customPipeline = {
 
 ## Configuration
 
-Configure guardrail behavior through MCF configuration:
+Configure guardrail behavior through MCFACTORY configuration:
 
 ```json
 {

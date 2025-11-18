@@ -1,12 +1,12 @@
 # Integration Guide
 
-This guide provides comprehensive instructions for integrating MCF (Model Context Factory) into your applications. Whether you're building a web application, mobile app, CLI tool, or enterprise system, MCF offers flexible integration options to meet your needs.
+This guide provides comprehensive instructions for integrating MCFACTORY (Model Context Factory) into your applications. Whether you're building a web application, mobile app, CLI tool, or enterprise system, MCFACTORY offers flexible integration options to meet your needs.
 
 ## Quick Start Integration
 
 ### Basic Setup
 
-1. **Install MCF**
+1. **Install MCFACTORY**
 ```bash
 npm install mcf
 # or
@@ -23,9 +23,9 @@ export ANTHROPIC_API_KEY="your-anthropic-key"
 
 3. **Basic Usage**
 ```typescript
-import { MCF } from 'mcf';
+import { MCFACTORY } from 'mcf';
 
-const client = new MCF();
+const client = new MCFACTORY();
 
 // Translate text
 const translation = await client.translate('Hello world', 'es');
@@ -99,7 +99,7 @@ app.use('/api/content', async (req, res, next) => {
 });
 
 app.listen(3000, () => {
-  console.log('MCF-integrated API server running on port 3000');
+  console.log('MCFACTORY-integrated API server running on port 3000');
 });
 ```
 
@@ -240,7 +240,7 @@ export default function TranslationScreen() {
     setLoading(true);
     try {
       // For React Native, you might want to use a proxy API
-      // or set up MCF on a backend server
+      // or set up MCFACTORY on a backend server
       const result = await translateText(inputText, 'es');
       setTranslatedText(result);
     } catch (error) {
@@ -287,7 +287,7 @@ export default function TranslationScreen() {
 
 ### Custom Service Implementation
 
-Create application-specific services that extend MCF:
+Create application-specific services that extend MCFACTORY:
 
 ```typescript
 import { TranslationFactory } from '../core/factories/TranslationFactory';
@@ -549,7 +549,7 @@ app.post('/api/content', async (req, res) => {
 
 ### Adding Custom Providers
 
-Extend MCF with custom AI providers:
+Extend MCFACTORY with custom AI providers:
 
 ```typescript
 import { Provider, ProviderRequest, ProviderResponse } from '../types';
@@ -625,7 +625,7 @@ import { ErrorHandler } from '../core/error/ErrorHandler';
 const errorHandler = new ErrorHandler({
   onError: (error, context) => {
     // Log to your error monitoring system
-    console.error('MCF Error:', {
+    console.error('MCFACTORY Error:', {
       error: error.message,
       code: error.code,
       context,
@@ -972,7 +972,7 @@ app.use('/api/mcf', mcfLimiter);
 
 ### Unit Testing
 
-Test MCF integrations:
+Test MCFACTORY integrations:
 
 ```typescript
 import { translateText } from '../services/translation/translateText';
@@ -1058,18 +1058,18 @@ Configure for different environments:
 
 ```bash
 # Development
-export MCF_CONFIG=./config/dev.json
+export MCFACTORY_CONFIG=./config/dev.json
 export LOG_LEVEL=debug
 
 # Production
-export MCF_CONFIG=./config/prod.json
+export MCFACTORY_CONFIG=./config/prod.json
 export LOG_LEVEL=warn
-export MCF_CACHE_ENABLED=true
+export MCFACTORY_CACHE_ENABLED=true
 ```
 
 ### Scaling Considerations
 
-Scale MCF applications horizontally:
+Scale MCFACTORY applications horizontally:
 
 ```typescript
 // Load balancing configuration
@@ -1087,7 +1087,7 @@ if (cluster.isMaster) {
   });
 } else {
   // Worker process
-  const app = createMCFApplication();
+  const app = createMCFACTORYApplication();
   app.listen(3000);
 }
 ```
@@ -1096,27 +1096,27 @@ if (cluster.isMaster) {
 
 ### Application Architecture
 
-1. **Layer Separation**: Keep MCF logic separate from business logic
-2. **Dependency Injection**: Use dependency injection for MCF services
-3. **Configuration Management**: Centralize MCF configuration
-4. **Error Boundaries**: Implement error boundaries around MCF operations
+1. **Layer Separation**: Keep MCFACTORY logic separate from business logic
+2. **Dependency Injection**: Use dependency injection for MCFACTORY services
+3. **Configuration Management**: Centralize MCFACTORY configuration
+4. **Error Boundaries**: Implement error boundaries around MCFACTORY operations
 5. **Caching Strategy**: Implement appropriate caching for performance
-6. **Monitoring**: Monitor MCF operations and performance
+6. **Monitoring**: Monitor MCFACTORY operations and performance
 
 ### Code Organization
 
-1. **Service Wrappers**: Create application-specific wrappers around MCF services
+1. **Service Wrappers**: Create application-specific wrappers around MCFACTORY services
 2. **Middleware Pattern**: Use middleware for cross-cutting concerns
 3. **Factory Pattern**: Use factories for complex object creation
 4. **Repository Pattern**: Abstract data access behind repositories
 
 ### Security
 
-1. **Input Validation**: Always validate inputs before MCF processing
+1. **Input Validation**: Always validate inputs before MCFACTORY processing
 2. **Rate Limiting**: Implement rate limiting to prevent abuse
 3. **API Key Security**: Securely manage and rotate API keys
-4. **Audit Logging**: Log all MCF operations for security review
-5. **Access Control**: Implement proper authorization for MCF endpoints
+4. **Audit Logging**: Log all MCFACTORY operations for security review
+5. **Access Control**: Implement proper authorization for MCFACTORY endpoints
 
 ### Performance
 
@@ -1128,10 +1128,10 @@ if (cluster.isMaster) {
 
 ### Maintainability
 
-1. **Documentation**: Document MCF integrations and configurations
-2. **Testing**: Write comprehensive tests for MCF integrations
-3. **Version Pinning**: Pin MCF versions to ensure stability
-4. **Change Management**: Have procedures for MCF updates
-5. **Monitoring**: Monitor MCF performance and errors
+1. **Documentation**: Document MCFACTORY integrations and configurations
+2. **Testing**: Write comprehensive tests for MCFACTORY integrations
+3. **Version Pinning**: Pin MCFACTORY versions to ensure stability
+4. **Change Management**: Have procedures for MCFACTORY updates
+5. **Monitoring**: Monitor MCFACTORY performance and errors
 
-This integration guide provides the foundation for successfully incorporating MCF into your applications, with patterns and practices that ensure reliability, performance, and maintainability.
+This integration guide provides the foundation for successfully incorporating MCFACTORY into your applications, with patterns and practices that ensure reliability, performance, and maintainability.

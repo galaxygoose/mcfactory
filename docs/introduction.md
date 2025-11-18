@@ -1,12 +1,12 @@
 # Introduction
 
-## What is MCF?
+## What is MCFACTORY?
 
-MCF (Model Context Factory) is a comprehensive TypeScript framework for AI model interactions, content processing, and workflow orchestration. It provides a unified interface for multiple AI providers and services through a factory pattern architecture, enabling developers to build complex AI-powered applications with consistent APIs and robust safety measures.
+MCFACTORY (Model Context Factory) is a comprehensive TypeScript framework for AI model interactions, content processing, and workflow orchestration. It provides a unified interface for multiple AI providers and services through a factory pattern architecture, enabling developers to build complex AI-powered applications with consistent APIs and robust safety measures.
 
 ## Architecture Overview
 
-MCF follows a layered architecture:
+MCFACTORY follows a layered architecture:
 
 - **Providers**: Abstract interfaces to AI services (OpenAI, Anthropic, Gemini, etc.)
 - **Factories**: Standardized processing units for specific AI tasks
@@ -38,7 +38,7 @@ MCF follows a layered architecture:
 
 ## Master Interface Contract (MIC)
 
-MCF enforces consistency through the Master Interface Contract - a comprehensive type system that defines:
+MCFACTORY enforces consistency through the Master Interface Contract - a comprehensive type system that defines:
 
 - Standardized input/output shapes for all services
 - Factory interfaces for extensible AI processing
@@ -49,10 +49,10 @@ MCF enforces consistency through the Master Interface Contract - a comprehensive
 ## Quick Start
 
 ```typescript
-import { MCF } from 'mcf';
+import { MCFACTORY } from 'mcf';
 
 // Initialize the client
-const client = new MCF();
+const client = new MCFACTORY();
 
 // Translate text
 const translation = await client.translate('Hello world', 'es');

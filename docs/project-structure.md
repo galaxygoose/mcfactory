@@ -1,11 +1,11 @@
-# MCF Project Structure
+# MCFACTORY Project Structure
 
-This document provides a complete overview of the MCF (Model Context Factory) project file structure.
+This document provides a complete overview of the MCFACTORY (Model Context Factory) project file structure.
 
 ## Root Directory
 
 ```
-MCF/
+MCFACTORY/
 ├── dist/                          # Compiled JavaScript and TypeScript declaration files
 ├── docs/                          # Documentation files
 ├── node_modules/                  # Node.js dependencies
@@ -13,7 +13,7 @@ MCF/
 ├── tests/                         # Test files
 ├── jest.config.js                 # Jest testing configuration
 ├── LICENSE                        # Project license
-├── mcf.config.json               # MCF configuration file
+├── mcf.config.json               # MCFACTORY configuration file
 ├── mcp-manifest.json             # MCP (Model Context Protocol) manifest
 ├── package-lock.json             # NPM lock file
 ├── package.json                  # NPM package configuration
@@ -25,7 +25,7 @@ MCF/
 
 ```
 src/
-├── core/                         # Core MCF functionality
+├── core/                         # Core MCFACTORY functionality
 │   ├── cli/                      # Command-line interface
 │   │   ├── commands/            # CLI command implementations
 │   │   │   ├── diagnose.ts       # System diagnostics command
@@ -142,7 +142,7 @@ src/
 │       ├── workflowSchema.ts   # Workflow schema validation
 │       ├── workflowTypes.ts    # Workflow type definitions
 │       └── workflowValidator.ts # Workflow validation
-├── index.ts                    # Main MCF entry point
+├── index.ts                    # Main MCFACTORY entry point
 ├── providers.ts                # Provider initialization
 └── types.ts                    # TypeScript type definitions
 ```
@@ -151,10 +151,10 @@ src/
 
 ```
 src/sdk/
-├── client.ts                   # Main MCFactory SDK client
+├── client.ts                   # Main MCFACTORY SDK client
 ├── index.ts                    # SDK exports
 ├── interfaces.ts               # SDK interface definitions
-├── mcfactory.d.ts              # MCFactory type definitions
+├── mcfactory.d.ts              # MCFACTORY type definitions
 └── providerBindings.ts         # Provider binding utilities
 ```
 
@@ -281,4 +281,4 @@ The `dist/` directory contains compiled JavaScript and TypeScript declaration fi
 4. **Layered Architecture**: Clear separation between core, services, SDK, and CLI layers
 5. **MCP Integration**: Model Context Protocol support for enhanced AI interactions
 
-This structure ensures maintainability, extensibility, and clear separation of concerns throughout the MCF framework.
+This structure ensures maintainability, extensibility, and clear separation of concerns throughout the MCFACTORY framework.

@@ -1,6 +1,6 @@
 # Workflows
 
-MCF Workflows provide powerful pipeline orchestration capabilities for complex multi-step AI processing operations. Workflows enable you to combine multiple AI tasks into cohesive processing pipelines with sequential execution, parallel processing, error handling, and result aggregation.
+MCFACTORY Workflows provide powerful pipeline orchestration capabilities for complex multi-step AI processing operations. Workflows enable you to combine multiple AI tasks into cohesive processing pipelines with sequential execution, parallel processing, error handling, and result aggregation.
 
 ## Core Concepts
 
@@ -135,7 +135,7 @@ The WorkflowFactory provides methods for creating and executing pipelines.
 
 ### Predefined Workflows
 
-MCF includes several predefined workflow templates:
+MCFACTORY includes several predefined workflow templates:
 
 ```typescript
 import { WorkflowFactory } from '../core/factories/WorkflowFactory';
@@ -545,7 +545,7 @@ const visualization = await factory.visualizePipeline(pipeline);
 
 ## Configuration
 
-Configure workflow behavior through MCF configuration:
+Configure workflow behavior through MCFACTORY configuration:
 
 ```json
 {

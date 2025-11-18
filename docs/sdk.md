@@ -1,10 +1,10 @@
 # SDK
 
-The MCF SDK provides a simple, unified interface for accessing all MCF capabilities. It combines factories, services, and workflows into a single, easy-to-use client that handles provider routing, error management, and response formatting automatically.
+The MCFACTORY SDK provides a simple, unified interface for accessing all MCFACTORY capabilities. It combines factories, services, and workflows into a single, easy-to-use client that handles provider routing, error management, and response formatting automatically.
 
 ## Installation
 
-Install MCF using npm or yarn:
+Install MCFACTORY using npm or yarn:
 
 ```bash
 npm install mcf
@@ -17,10 +17,10 @@ yarn add mcf
 Basic usage with automatic provider selection:
 
 ```typescript
-import { MCF } from 'mcf';
+import { MCFACTORY } from 'mcf';
 
 // Initialize the client
-const client = new MCF();
+const client = new MCFACTORY();
 
 // Translate text
 const translation = await client.translate('Hello world', 'es');
@@ -40,17 +40,17 @@ console.log(moderation.safe); // true
 Configure the SDK client with custom settings:
 
 ```typescript
-import { MCF } from 'mcf';
+import { MCFACTORY } from 'mcf';
 
 // Basic configuration
-const client = new MCF({
+const client = new MCFACTORY({
   provider: 'openai', // Default provider
   debug: true,        // Enable debug logging
   timeout: 30000      // Request timeout in ms
 });
 
 // Advanced configuration
-const advancedClient = new MCF({
+const advancedClient = new MCFACTORY({
   providers: {
     openai: {
       apiKey: process.env.OPENAI_API_KEY,
@@ -521,7 +521,7 @@ Execute complex pipelines through the SDK:
 ```typescript
 import { WorkflowFactory } from 'mcf';
 
-const workflowClient = new MCF({
+const workflowClient = new MCFACTORY({
   workflowFactory: new WorkflowFactory()
 });
 
@@ -629,12 +629,12 @@ Configure SDK behavior through environment variables or programmatic config:
 
 ```typescript
 // Environment variables
-process.env.MCF_DEFAULT_PROVIDER = 'openai';
-process.env.MCF_DEBUG = 'true';
-process.env.MCF_TIMEOUT = '30000';
+process.env.MCFACTORY_DEFAULT_PROVIDER = 'openai';
+process.env.MCFACTORY_DEBUG = 'true';
+process.env.MCFACTORY_TIMEOUT = '30000';
 
 // Programmatic configuration
-const client = new MCF({
+const client = new MCFACTORY({
   defaultProvider: 'openai',
   debug: true,
   timeout: 30000,
@@ -749,4 +749,4 @@ Error: Provider temporarily unavailable
 Solution: Try different provider or implement retry logic
 ```
 
-This SDK provides a comprehensive, easy-to-use interface for accessing all MCF capabilities while handling the complexity of provider management, error handling, and optimization internally.
+This SDK provides a comprehensive, easy-to-use interface for accessing all MCFACTORY capabilities while handling the complexity of provider management, error handling, and optimization internally.

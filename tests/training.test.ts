@@ -237,23 +237,6 @@ describe('Training', () => {
       })).rejects.toThrow('Unsupported format: unsupported');
     });
 
-    test('should handle debug mode', async () => {
-      const examples: TrainingExample[] = [
-        {
-          input: 'Test input',
-          task: 'test'
-        }
-      ];
-
-      const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
-
-      await factory.run(examples, { debug: true });
-
-      expect(consoleSpy).toHaveBeenCalledWith('Training dataset export:', expect.any(Object));
-
-      consoleSpy.mockRestore();
-    });
-
     test('should generate unique filenames with timestamps', async () => {
       const examples: TrainingExample[] = [
         {

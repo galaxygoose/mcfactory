@@ -1,10 +1,10 @@
 # Configuration
 
-MCF supports flexible configuration through environment variables, JSON configuration files, and programmatic setup. The configuration system follows the Master Interface Contract (MIC) and allows fine-grained control over provider routing, defaults, and behavior.
+MCFACTORY supports flexible configuration through environment variables, JSON configuration files, and programmatic setup. The configuration system follows the Master Interface Contract (MIC) and allows fine-grained control over provider routing, defaults, and behavior.
 
 ## Environment Variables
 
-MCF reads configuration from environment variables for sensitive information and global settings.
+MCFACTORY reads configuration from environment variables for sensitive information and global settings.
 
 ### API Keys
 ```bash
@@ -40,7 +40,7 @@ BANNED_TOPICS=politics,violence
 
 ## Configuration File
 
-MCF supports JSON configuration files (`mcf.config.json` by default) for complex setups and non-sensitive configuration.
+MCFACTORY supports JSON configuration files (`mcf.config.json` by default) for complex setups and non-sensitive configuration.
 
 ### Basic Configuration
 ```json
@@ -186,10 +186,10 @@ MCF supports JSON configuration files (`mcf.config.json` by default) for complex
 
 ## Provider Routing
 
-MCF's provider routing system allows intelligent selection of AI providers based on task type, performance requirements, and cost considerations.
+MCFACTORY's provider routing system allows intelligent selection of AI providers based on task type, performance requirements, and cost considerations.
 
 ### Automatic Routing
-By default, MCF routes requests based on predefined rules:
+By default, MCFACTORY routes requests based on predefined rules:
 
 ```typescript
 // Routes to OpenAI for general tasks
@@ -359,7 +359,7 @@ Configure provider-specific behavior:
 
 ## Configuration Validation
 
-MCF validates configuration on startup and provides helpful error messages:
+MCFACTORY validates configuration on startup and provides helpful error messages:
 
 ```bash
 # Validate configuration file
@@ -375,20 +375,20 @@ Use different configurations for development, staging, and production:
 
 ```bash
 # Development
-NODE_ENV=development MCF_CONFIG=./config/dev.json
+NODE_ENV=development MCFACTORY_CONFIG=./config/dev.json
 
 # Production
-NODE_ENV=production MCF_CONFIG=./config/prod.json
+NODE_ENV=production MCFACTORY_CONFIG=./config/prod.json
 ```
 
 ## Programmatic Configuration
 
-Configure MCF programmatically in code:
+Configure MCFACTORY programmatically in code:
 
 ```typescript
-import { MCFConfig } from './types';
+import { MCFACTORYConfig } from './types';
 
-const config: MCFConfig = {
+const config: MCFACTORYConfig = {
   providers: {
     openai: {
       apiKey: process.env.OPENAI_API_KEY!,

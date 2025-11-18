@@ -2,7 +2,7 @@
 // Other agents must implement logic INSIDE this file only.
 // Do NOT create or delete files. Respect the MIC + MIM.
 
-export interface MCFactoryConfig {
+export interface MCFACTORYConfig {
   provider: string;
   apiKey: string;
 }

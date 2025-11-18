@@ -1,6 +1,6 @@
 # Services
 
-MCF Services provide high-level, easy-to-use APIs for common AI operations. Services combine factories with additional logic, convenience methods, and service-specific features to offer streamlined access to MCF capabilities.
+MCFACTORY Services provide high-level, easy-to-use APIs for common AI operations. Services combine factories with additional logic, convenience methods, and service-specific features to offer streamlined access to MCFACTORY capabilities.
 
 ## Service Overview
 
@@ -342,7 +342,7 @@ console.log(services); // ["translation", "detection", "moderation", ...]
 
 ## Configuration
 
-Configure services through MCF configuration:
+Configure services through MCFACTORY configuration:
 
 ```json
 {
@@ -624,4 +624,4 @@ class CustomTranslationService extends TranslationService {
 }
 ```
 
-This service layer provides a clean, consistent API for accessing MCF capabilities while maintaining the flexibility and power of the underlying factory system.
+This service layer provides a clean, consistent API for accessing MCFACTORY capabilities while maintaining the flexibility and power of the underlying factory system.

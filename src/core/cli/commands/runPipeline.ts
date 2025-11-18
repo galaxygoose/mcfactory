@@ -4,7 +4,7 @@
 
 import { Command } from 'commander';
 import * as fs from 'fs';
-import { MCFactoryConfig, PipelineResult } from '../../../types';
+import { MCFACTORYConfig, PipelineResult } from '../../../types';
 import { ConfigLoader } from '../../config/configLoader';
 import { PipelineRunner } from '../../orchestration/pipelineRunner';
 
@@ -20,7 +20,7 @@ export function runPipelineCommand(pipelineName: string, options: any): void {
     }
 
     // Load config
-    const config = ConfigLoader.load() as MCFactoryConfig;
+    const config = ConfigLoader.load() as MCFACTORYConfig;
 
     // Check if pipelines are defined
     if (!config.pipelines || !config.pipelines[pipelineName]) {

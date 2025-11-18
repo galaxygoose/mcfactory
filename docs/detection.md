@@ -1,6 +1,6 @@
 # AI Detection
 
-MCF provides comprehensive AI detection capabilities for identifying AI-generated content across text and voice modalities. The detection system uses multiple techniques and ensemble methods to achieve high accuracy while minimizing false positives.
+MCFACTORY provides comprehensive AI detection capabilities for identifying AI-generated content across text and voice modalities. The detection system uses multiple techniques and ensemble methods to achieve high accuracy while minimizing false positives.
 
 ## Text Detection
 
@@ -237,7 +237,7 @@ Detection works with specialized AI providers optimized for analysis tasks:
 
 ## Configuration
 
-Configure detection behavior through MCF configuration:
+Configure detection behavior through MCFACTORY configuration:
 
 ```json
 {
@@ -323,7 +323,7 @@ try {
 
 ## Integration with Workflows
 
-Detection integrates seamlessly with MCF workflows:
+Detection integrates seamlessly with MCFACTORY workflows:
 
 ```typescript
 import { WorkflowFactory } from '../core/factories/WorkflowFactory';

@@ -1,6 +1,6 @@
 # Translation
 
-MCF provides comprehensive translation capabilities across text and voice modalities. The translation system uses multiple AI providers and includes advanced features like format preservation, automatic language detection, and voice-to-voice translation.
+MCFACTORY provides comprehensive translation capabilities across text and voice modalities. The translation system uses multiple AI providers and includes advanced features like format preservation, automatic language detection, and voice-to-voice translation.
 
 ## Text Translation
 
@@ -239,7 +239,7 @@ Translation works with multiple AI providers, each optimized for different use c
 
 ## Language Support
 
-MCF supports translation between 100+ languages:
+MCFACTORY supports translation between 100+ languages:
 
 ### Popular Language Pairs
 - English ↔ Spanish, French, German, Italian, Portuguese
@@ -291,7 +291,7 @@ We are pleased to announce that our new **AI-powered features** will be availabl
 - Enhanced security
 
 Best regards,
-The MCF Team
+The MCFACTORY Team
 `;
 
 const result = await translateText(formattedText, 'es', 'en', true);
@@ -434,7 +434,7 @@ if (status.reviewed) {
 
 ## Configuration
 
-Configure translation behavior through MCF configuration:
+Configure translation behavior through MCFACTORY configuration:
 
 ```json
 {

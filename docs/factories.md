@@ -1,12 +1,12 @@
 # Factories
 
-MCF Factories are the core processing units that implement the factory pattern to provide standardized AI operations. Each factory handles a specific type of AI task while maintaining consistent interfaces and provider routing.
+MCFACTORY Factories are the core processing units that implement the factory pattern to provide standardized AI operations. Each factory handles a specific type of AI task while maintaining consistent interfaces and provider routing.
 
 ## Factory Pattern Overview
 
 ### What are Factories?
 
-Factories in MCF are specialized classes that:
+Factories in MCFACTORY are specialized classes that:
 
 - Encapsulate AI processing logic for specific tasks
 - Route requests to appropriate providers automatically
@@ -490,7 +490,7 @@ const result = await factory.run(input, {
 
 ## Factory Configuration
 
-Configure factory behavior through MCF configuration:
+Configure factory behavior through MCFACTORY configuration:
 
 ```json
 {
@@ -649,7 +649,7 @@ class TranslationService {
 
 ## Factory Registry
 
-MCF maintains a registry of all available factories:
+MCFACTORY maintains a registry of all available factories:
 
 ```typescript
 import { FactoryRegistry } from '../core/factories/FactoryRegistry';

@@ -564,17 +564,17 @@ mcfactory interactive dataset ./data/training.jsonl
 
 ### Development Configuration
 ```bash
-export MCF_CONFIG=./config/dev.json
+export MCFACTORY_CONFIG=./config/dev.json
 export LOG_LEVEL=debug
-export MCF_CACHE_ENABLED=true
+export MCFACTORY_CACHE_ENABLED=true
 ```
 
 ### Production Configuration
 ```bash
-export MCF_CONFIG=./config/prod.json
+export MCFACTORY_CONFIG=./config/prod.json
 export LOG_LEVEL=warn
-export MCF_MAX_CONCURRENCY=10
-export MCF_RATE_LIMIT_REQUESTS_PER_MINUTE=1000
+export MCFACTORY_MAX_CONCURRENCY=10
+export MCFACTORY_RATE_LIMIT_REQUESTS_PER_MINUTE=1000
 ```
 
 ### Environment-Specific Setup

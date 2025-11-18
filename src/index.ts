@@ -5,7 +5,7 @@
 // Initialize providers
 import { PROVIDER_INIT } from './providers';
 
-export { MCFactory } from './sdk/client';
+export { MCFACTORY } from './sdk/client';
 export * from './types';
 
 // Ensure providers are initialized
