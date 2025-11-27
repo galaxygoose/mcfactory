@@ -10,6 +10,11 @@
   "bin": {
     "mcfactory": "dist/core/cli/mcf-cli.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest",
@@ -24,6 +29,8 @@
     "models",
     "factory",
     "mcp",
+    "model-context-protocol",
+    "sdk",
     "workflow-engine",
     "typescript",
     "translation",
@@ -53,10 +60,10 @@
     "ts-node": "^10.0.0",
     "eslint": "^8.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0"
+    "@typescript-eslint/parser": "^6.0.0",
+    "dotenv": "^16.0.0"
   },
   "dependencies": {
-    "dotenv": "^16.0.0",
     "commander": "^11.0.0",
     "axios": "^1.0.0"
   },

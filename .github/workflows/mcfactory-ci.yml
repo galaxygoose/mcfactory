@@ -57,6 +57,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     if: github.ref == 'refs/heads/main'
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: Checkout Repo
@@ -77,4 +80,4 @@ jobs:
       - name: Publish Package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
+        run: npm publish --access public --provenance

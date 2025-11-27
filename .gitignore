@@ -36,6 +36,9 @@ temp/
 # Test coverage
 coverage/
 
+# Generated test files
+tests/
+
 # Cache
 .cache/
 .parcel-cache/
