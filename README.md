@@ -1,10 +1,10 @@
-<img width="934" height="227" alt="image" src="https://github.com/user-attachments/assets/d005cd6b-3328-415d-93e0-d33a425cbb14" />
+<img src="https://github.com/user-attachments/assets/9db1c349-a252-40ae-b88e-6d725c94d93c" width="120" />
 
 # **MCFactory**
 
 **An SDK for the Model Context Protocol (MCP)** – A unified framework for building AI applications with multi-provider routing, workflows, guardrails, and training pipelines.
 
----
+<img width="934" height="227" alt="image" src="https://github.com/user-attachments/assets/d005cd6b-3328-415d-93e0-d33a425cbb14" />
 
 ## **What does MCFactory manufacture?**
 
@@ -127,4 +127,5 @@ mcfactory run-pipeline --config my-config.json
 
 This project uses the **MCFactory ALPHA License**. See `LICENSE` for details.
 l me and I’ll generate the upgraded README.
+
 
